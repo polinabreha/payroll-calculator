@@ -21,5 +21,12 @@ public class PayrollApp {
 
         System.out.println(name + " your gross pay is " + grossPay);
 
+        if (hours >= 40) {
+            double overTime = hours - 40;
+            double payForOvertime = (payRate * 1.50) * overTime;
+            double fullPayment = payForOvertime + grossPay;
+            System.out.println(name + " your gross pay with overtime is " + fullPayment );
+        }
+
     }
 }
